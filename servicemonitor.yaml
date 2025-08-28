@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: demo-api
+  namespace: monitoring
+  labels:
+    release: kps   # must match your kube-prometheus-stack release label selector
+spec:
+  namespaceSelector:
+    matchNames: ["autonomic-demo"]
+  selector:
+    matchLabels:
+      app: demo-api
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s

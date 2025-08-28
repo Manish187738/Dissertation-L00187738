@@ -1,0 +1,43 @@
+{
+  "provider": "",
+  "errors": null,
+  "status": "ProblemDetected",
+  "problems": 2,
+  "results": [
+    {
+      "kind": "ConfigMap",
+      "name": "default/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "",
+      "parentObject": ""
+    },
+    {
+      "kind": "Service",
+      "name": "default/test-svc",
+      "error": [
+        {
+          "Text": "Service has no endpoints, expected label app=test-pod",
+          "KubernetesDoc": "",
+          "Sensitive": [
+            {
+              "Unmasked": "app",
+              "Masked": "PEh1"
+            },
+            {
+              "Unmasked": "test-pod",
+              "Masked": "OE13cHYrXiM="
+            }
+          ]
+        }
+      ],
+      "details": "",
+      "parentObject": ""
+    }
+  ]
+}

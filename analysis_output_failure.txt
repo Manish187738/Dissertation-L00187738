@@ -1,0 +1,9 @@
+AI Provider: AI not used; --explain not set
+
+0: ConfigMap default/kube-root-ca.crt()
+- Error: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+
+1: Service default/test-svc()
+- Error: Service has no endpoints, expected label app=test-pod
+
+

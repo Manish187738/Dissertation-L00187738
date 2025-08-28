@@ -1,0 +1,8 @@
+Debug: Checking kubernetes client initialization.
+Debug: Kubernetes client initialized, server=https://172.31.37.87:6443.
+Debug: Checking cache configuration.
+Debug: Cache configuration loaded, type=file.
+Debug: Analysis configuration loaded, filters=[], language=english, namespace=none, labelSelector=none, explain=true, maxConcurrency=10, withDoc=false, withStats=false.
+Debug: Checking AI configuration.
+Debug: Checking analysis configuration.
+Error: AI provider not specified in configuration. Please run k8sgpt auth
