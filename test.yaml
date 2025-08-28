@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8sgpt.ai/repair: "true"  # Allows K8sGPT to auto-fix issues
+  creationTimestamp: null
+  labels:
+    run: test-pod
+  name: test-pod
+spec:
+  containers:
+  - image: manish0529/test-image:latest
+    name: test-pod
+    ports:
+    - containerPort: 8080
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

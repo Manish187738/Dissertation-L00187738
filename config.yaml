@@ -1,0 +1,16 @@
+# config.yaml
+apiVersion: core.k8sgpt.ai/v1alpha1
+kind: K8sGPT
+metadata:
+  name: k8sgpt-sample
+  namespace: k8sgpt
+spec:
+  ai:
+    enabled: true
+    backend: "openai"  # or "localai", "anthropic"
+    secret:
+      name: "k8sgpt-secret"
+      key: "openai-api-key"
+  filters:
+    - "PodCrashLoopBackOff"
+    - "DeploymentNotReady"
